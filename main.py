@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import *
+from tkinter import colorchooser
 
 root = tk.Tk()
 
@@ -8,8 +9,6 @@ root.title('tkinterApp')
 
 def btnFunc():
 	entry.delete(1,tk.END)
-
-	from tkinter import colorchooser
 
 	s = colorchooser.askcolor()
 	
