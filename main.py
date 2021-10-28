@@ -9,7 +9,7 @@ root.title('tkinterApp')
 
 def btnFunc():
 	s = colorchooser.askcolor()
-
+	
 	entry.delete(1,tk.END)
 
 	print(s[1])
@@ -23,7 +23,7 @@ def btnFunc():
 
 lbl = tk.Label(text='HEX', justify='center')
 
-entry = tk.Entry(justify='center', bg='#a0a0a0')
+entry = tk.Entry(justify='center', bg='#a0a0a0)
 
 btn = tk.Button(text = 'Выберите цвет', bg='#fff', command=btnFunc,justify='center',width=20)
 
