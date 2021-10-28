@@ -6,13 +6,22 @@ root = tk.Tk()
 
 root.geometry('300x300')
 root.title('tkinterApp')
-
+bf=0
 def btnFunc():
+	global bf
 	entry.config(state="normal")
 	entry.delete(1,tk.END)
 
 	s = colorchooser.askcolor()
-	
+	if bf:
+		pass
+	else:
+		lbl1.pack()
+		color.pack(pady=10)
+		lbl.pack()
+		entry.pack()
+
+		bf=1
 	print(s[1])
 
 	if s[1][0] in '#':
@@ -24,20 +33,19 @@ def btnFunc():
 
 	entry.config(state="readonly")
 
-lbl = tk.Label(text='HEX', justify='center')
+lbl = tk.Label(text='HEX:', justify='center')
 
 entry = tk.Entry(justify='center', bg='#a0a0a0')
 
 btn = tk.Button(text = 'Выберите цвет', bg='#fff', command=btnFunc,justify='center',width=20)
 
-lbl1 = tk.Label(text='Цвет который получился', justify='center')
+lbl1 = tk.Label(text='Цвет который получился:', justify='center')
 
 color = tk.Label(width = 20, justify='center')
 
-lbl.pack()
-entry.pack()
-btn.pack(pady=10)
-lbl1.pack()
-color.pack(pady=10)
 
+btn.pack(pady=10)
+
+
+entry.config(state="readonly")
 root.mainloop()
