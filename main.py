@@ -8,10 +8,10 @@ root.geometry('300x300')
 root.title('tkinterApp')
 
 def btnFunc():
-	entry.delete(1,tk.END)
-
 	s = colorchooser.askcolor()
 	
+	entry.delete(1,tk.END)
+
 	print(s[1])
 
 	if s[1][0] in '#':
