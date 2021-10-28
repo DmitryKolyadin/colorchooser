@@ -10,13 +10,13 @@ lbl = tk.Label(text='HEX', justify='center')
 
 entry = tk.Entry(justify='center')
 
-btn = tk.Button(text = 'Выберите цвет', bg='#fff', command=lambda:btN(),justify='center',width=20)
+btn = tk.Button(text = 'Выберите цвет', bg='#fff', command=lambda:btnFunc(),justify='center',width=20)
 
 lbl1 = tk.Label(text='Цвет который получился', justify='center')
 
 color = tk.Label(width = 20, justify='center')
 
-def btN():
+def btnFunc():
 	entry.delete(1,tk.END)
 
 	from tkinter import colorchooser
