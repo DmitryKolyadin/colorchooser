@@ -8,10 +8,11 @@ root.geometry('300x300')
 root.title('tkinterApp')
 
 def btnFunc():
-	s = colorchooser.askcolor()
-	
+	entry.config(state="normal")
 	entry.delete(1,tk.END)
 
+	s = colorchooser.askcolor()
+	
 	print(s[1])
 
 	if s[1][0] in '#':
@@ -21,9 +22,11 @@ def btnFunc():
 	entry.delete(1,tk.END)
 	entry.insert(1,s[1])
 
+	entry.config(state="readonly")
+
 lbl = tk.Label(text='HEX', justify='center')
 
-entry = tk.Entry(justify='center', bg='#a0a0a0)
+entry = tk.Entry(justify='center', bg='#a0a0a0')
 
 btn = tk.Button(text = 'Выберите цвет', bg='#fff', command=btnFunc,justify='center',width=20)
 
