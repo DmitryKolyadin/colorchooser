@@ -7,6 +7,8 @@ root = tk.Tk()
 root.geometry('300x300')
 root.title('tkinterApp')
 
+entry.config(state="readonly")
+
 def btnFunc():
 	entry.config(state="normal")
 	entry.delete(1,tk.END)
