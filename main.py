@@ -6,16 +6,6 @@ root = tk.Tk()
 root.geometry('300x300')
 root.title('tkinterApp')
 
-lbl = tk.Label(text='HEX', justify='center')
-
-entry = tk.Entry(justify='center')
-
-btn = tk.Button(text = 'Выберите цвет', bg='#fff', command=lambda:btnFunc(),justify='center',width=20)
-
-lbl1 = tk.Label(text='Цвет который получился', justify='center')
-
-color = tk.Label(width = 20, justify='center')
-
 def btnFunc():
 	entry.delete(1,tk.END)
 
@@ -31,6 +21,16 @@ def btnFunc():
 	color.configure(bg=s[1])
 	entry.delete(1,tk.END)
 	entry.insert(1,s[1])
+
+lbl = tk.Label(text='HEX', justify='center')
+
+entry = tk.Entry(justify='center')
+
+btn = tk.Button(text = 'Выберите цвет', bg='#fff', command=btnFunc,justify='center',width=20)
+
+lbl1 = tk.Label(text='Цвет который получился', justify='center')
+
+color = tk.Label(width = 20, justify='center')
 
 lbl.pack()
 entry.pack()
