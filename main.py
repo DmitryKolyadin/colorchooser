@@ -8,6 +8,8 @@ root.geometry('300x300')
 root.title('ColorChooser')
 
 bf=0
+entry.config(state="readonly")
+
 def btnFunc():
 	global bf
 	entry.config(state="normal")
