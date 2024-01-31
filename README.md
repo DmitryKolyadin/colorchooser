@@ -5,7 +5,7 @@
 - python 3.8
 - tkinter 
 ```sh
-git clone https://github.com/DeveloperDmitryKolyadin/colorchooser.git
+git clone https://github.com/MrBallonvas/colorchooser.git
 cd colorchooser
 python main.py
 ```
